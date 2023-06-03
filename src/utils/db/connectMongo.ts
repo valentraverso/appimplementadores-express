@@ -1,9 +1,10 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-export default async function connectDB(app, DB_URI, PORT) {
+export default async function connectMongo(app, DB_URI, PORT) {
     try {
-        await mongoose.connect(DB_URI);
+        await mongoose.connect(DB_URI); // Connect to mongoDB
 
+        // Run server
         await app.listen(PORT, () => {
             console.log(`
             ,---------------------------,

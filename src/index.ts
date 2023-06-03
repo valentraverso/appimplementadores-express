@@ -3,8 +3,11 @@ import {
     DB_URI,
     PORT
 } from "./utils/config"
-import connectDB from "./utils/db/connectDB";
+import connectMongo from "./utils/db/connectMongo";
 
 const app = express();
 
-connectDB(app, DB_URI, PORT)
+// Connect to DB and run server
+connectMongo(app, DB_URI, PORT)
+
+// Router
