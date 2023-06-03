@@ -3,7 +3,15 @@ import { jokesSeed } from "./jokes/jokes";
 
 const seedUploader = {
     jokesSeed: async () => {
-        await jokesModel.deleteMany({});
-        await jokesModel.create(jokesSeed)
+        try {
+            await jokesModel.deleteMany({});
+            const seed = await jokesModel.insertMany(jokesSeed);
+            
+            return;
+        } catch (err) {
+            new Error(err)
+        }
     }
 }
+
+export default seedUploader;
