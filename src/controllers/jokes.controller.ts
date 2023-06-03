@@ -5,12 +5,17 @@ const jokesController = {
         const { category } = req.params;
 
         try {
-            const fetchJokeByCategory = fetch(`https://official-joke-api.appspot.com/jokes/${category}/random`)
+            const callAPI = await fetch(`https://official-joke-api.appspot.com/jokes/${category}/random`)
+            const [resAPI] = await callAPI.json();
+
+            console.log(resAPI)
 
             const joke = await jokesModel
                 .create(
                     {
-
+                        category: resAPI.type,
+                        setup: resAPI.setup,
+                        punchline: resAPI.punchline
                     }
                 );
 
@@ -26,7 +31,13 @@ const jokesController = {
                 data: joke
             })
         } catch (err) {
-
+            res.status(500).send({
+                status: false,
+                msg: "We have troubles while uploading joke.",
+                data: err
+            })
         }
     }
 }
+
+export { jokesController }

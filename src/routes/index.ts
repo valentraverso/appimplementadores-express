@@ -1,0 +1,1 @@
+export { jokesRoute } from './paths/jokes.route'
