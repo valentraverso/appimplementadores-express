@@ -1,0 +1,1 @@
+export type AllowedCategories = 'programming' | 'general ' | 'knok-kcnock'; // Allowed categories of the api

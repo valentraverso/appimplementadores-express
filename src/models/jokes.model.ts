@@ -1,6 +1,13 @@
 import { Schema, model } from "mongoose";
+import { AllowedCategories } from "../utils/types/jokes.td";
 
-const jokesSchema = new Schema({
+interface JokeInterface {
+    category: AllowedCategories;
+    setup: string;
+    punchline: string;
+}
+
+const jokesSchema = new Schema<JokeInterface>({
     category: {
         type: String,
         required: [true, "The category of the joke is required"]
