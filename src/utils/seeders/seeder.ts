@@ -5,8 +5,8 @@ const seedUploader = {
     jokesSeed: async () => {
         try {
             await jokesModel.deleteMany({});
-            const seed = await jokesModel.insertMany(jokesSeed);
-            
+            await jokesModel.insertMany(jokesSeed);
+
             return;
         } catch (err) {
             new Error(err)

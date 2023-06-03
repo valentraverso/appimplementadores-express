@@ -9,7 +9,7 @@ const {
 } = jokesController;
 
 const jokesRoute = router
-    .get('/all/:page', getAllJokes)
+    .get('/all/:page?', getAllJokes)
     .post('/post/api/:category', verifyToken, postJokeByApi);
 
 export { jokesRoute }

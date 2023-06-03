@@ -6,7 +6,8 @@ export default async function connectMongo(app, DB_URI, PORT) {
         await mongoose.connect(DB_URI); // Connect to mongoDB
 
         // Seeder
-        await seedUploader.jokesSeed();
+        // Uncomment to run seeder
+        // await seedUploader.jokesSeed();
 
         // Run server
         await app.listen(PORT, () => {
