@@ -38,7 +38,7 @@ npm run server
 
 ## Seeder
 
-If you want to have data in your first contact with the API. If necessary to uncomment the seeder function in `src/utils/db/connectMongo.ts` on `line 10`.
+If you want to have data in your first contact with the API. Is necessary to uncomment the seeder function in `src/utils/db/connectMongo.ts` on `line 10`.
 
 It will create 105 documents in your database.
 
