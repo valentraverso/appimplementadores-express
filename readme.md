@@ -3,7 +3,7 @@
 <h1 align=center>App Implementadores API</h1>
 
 API created by Valentino Traverso about jokes. In this API you would find jokes with they setup, punchline and category. 
-I wish you like it😁
+I hope you like it😁
 
 ## Index
 - [Getting Started](#getting-started)
@@ -23,9 +23,9 @@ Setup `.env` with the keys defined in the file `.env.example`.
 ### Run service
 
 The command to run the service is:
-
-    npm run server
-
+``` sh
+npm run server
+```
 ## Built with
 
 - [Express](https://expressjs.com/es/)
@@ -41,11 +41,25 @@ The command to run the service is:
 If you want to have data in your first contact with the API. If necessary to uncomment the seeder function in `src/utils/db/connectMongo.ts` on `line 10`.
 
 It will create 105 documents in your database.
-
+https://projects.valentinotraverso.com/github-clone
 ## Endpoints
 
+### Create Token
+
+`http://<api-url>/token`
+
+The token will be used in the header of the request with the key: **`Authorization`**.
+
+**Body**
+
+It's necessary to send a body in format `application/json` with the following keys:
+
+|          Name | Required |  Type   | Description                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `username` | required | string  | You could set whatever username you want to identify your JWT Token.
+
 ### Get all
-`http://<url>/jokes/all/:pagination`
+`http://<api-url>/jokes/all/:pagination`
 
 **Parameters**
 
@@ -55,7 +69,9 @@ It will create 105 documents in your database.
 
 ### POST by API
 
-`http://<url>/jokes/post/api/:category`
+`http://<api-url>/jokes/post/api/:category`
+
+**This request need a JWT Token** [How to create one](#create-token)
 
 **Parameters**
 |          Name | Required |  Type   | Values | Description                                                                                                                                                           |
