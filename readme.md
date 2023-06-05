@@ -1,6 +1,6 @@
 [![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
-<h1 align=center>App Implementadores API</h1>
+<h1 align=center>Apps Implantadores API</h1>
 
 API created by Valentino Traverso about jokes. In this API you would find jokes with they setup, punchline and category. 
 I hope you like it😁
