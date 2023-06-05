@@ -41,7 +41,7 @@ npm run server
 If you want to have data in your first contact with the API. If necessary to uncomment the seeder function in `src/utils/db/connectMongo.ts` on `line 10`.
 
 It will create 105 documents in your database.
-https://projects.valentinotraverso.com/github-clone
+
 ## Endpoints
 
 If you want to know more about the endpoints, you could find a json with them in `src/utils/postman`.
