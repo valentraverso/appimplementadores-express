@@ -44,6 +44,8 @@ It will create 105 documents in your database.
 https://projects.valentinotraverso.com/github-clone
 ## Endpoints
 
+If you want to know more about the endpoints, you could find a json with them in `src/utils/postman`.
+
 ### Create Token
 
 `http://<api-url>/token`
